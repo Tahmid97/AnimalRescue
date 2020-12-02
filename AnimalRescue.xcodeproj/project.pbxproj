@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B76E832F25784BF70042D13C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E832E25784BF70042D13C /* UserData.swift */; };
 		B7E8D5CD25773C5F00710667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5CC25773C5F00710667 /* AppDelegate.swift */; };
 		B7E8D5CF25773C5F00710667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5CE25773C5F00710667 /* SceneDelegate.swift */; };
 		B7E8D5D125773C5F00710667 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5D025773C5F00710667 /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B76E832E25784BF70042D13C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B7E8D5C925773C5F00710667 /* AnimalRescue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRescue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E8D5CC25773C5F00710667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E8D5CE25773C5F00710667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		B7E8D5E72577401300710667 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				B76E832E25784BF70042D13C /* UserData.swift */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				B7E8D5CD25773C5F00710667 /* AppDelegate.swift in Sources */,
 				B7E8D5CF25773C5F00710667 /* SceneDelegate.swift in Sources */,
 				B7E8D5F22577411E00710667 /* FindAnimals.swift in Sources */,
+				B76E832F25784BF70042D13C /* UserData.swift in Sources */,
 				B7E8D5F42577413B00710667 /* Shelters.swift in Sources */,
 				B7E8D5EE257740D400710667 /* Home.swift in Sources */,
 				B7E8D5D425773C5F00710667 /* AnimalRescue.xcdatamodeld in Sources */,
