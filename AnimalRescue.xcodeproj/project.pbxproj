@@ -14,6 +14,10 @@
 		B7E8D5D625773C6000710667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E8D5D525773C6000710667 /* Assets.xcassets */; };
 		B7E8D5D925773C6000710667 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E8D5D825773C6000710667 /* Preview Assets.xcassets */; };
 		B7E8D5DC25773C6000710667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E8D5DA25773C6000710667 /* LaunchScreen.storyboard */; };
+		B7E8D5EE257740D400710667 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5ED257740D400710667 /* Home.swift */; };
+		B7E8D5F02577410000710667 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5EF2577410000710667 /* FavoritesList.swift */; };
+		B7E8D5F22577411E00710667 /* FindAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F12577411E00710667 /* FindAnimals.swift */; };
+		B7E8D5F42577413B00710667 /* Shelters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F32577413B00710667 /* Shelters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		B7E8D5D825773C6000710667 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B7E8D5DB25773C6000710667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7E8D5DD25773C6000710667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E8D5ED257740D400710667 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B7E8D5EF2577410000710667 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
+		B7E8D5F12577411E00710667 /* FindAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAnimals.swift; sourceTree = "<group>"; };
+		B7E8D5F32577413B00710667 /* Shelters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shelters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,13 @@
 		B7E8D5CB25773C5F00710667 /* AnimalRescue */ = {
 			isa = PBXGroup;
 			children = (
-				B7E8D5CC25773C5F00710667 /* AppDelegate.swift */,
-				B7E8D5CE25773C5F00710667 /* SceneDelegate.swift */,
+				B7E8D5E82577401E00710667 /* Delegates */,
+				B7E8D5E72577401300710667 /* Data Model */,
+				B7E8D5E62577400A00710667 /* Core Data Model */,
+				B7E8D5E525773FED00710667 /* API Data */,
+				B7E8D5E425773FD800710667 /* Supporting Files */,
 				B7E8D5D025773C5F00710667 /* ContentView.swift */,
+				B7E8D5E325773FA800710667 /* Tab Bar Views */,
 				B7E8D5D525773C6000710667 /* Assets.xcassets */,
 				B7E8D5DA25773C6000710667 /* LaunchScreen.storyboard */,
 				B7E8D5DD25773C6000710667 /* Info.plist */,
@@ -76,6 +88,86 @@
 				B7E8D5D825773C6000710667 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B7E8D5E325773FA800710667 /* Tab Bar Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8D5EC2577409F00710667 /* Home */,
+				B7E8D5EB2577409700710667 /* Favorites */,
+				B7E8D5EA2577408F00710667 /* Find Animals */,
+				B7E8D5E92577407A00710667 /* Shelters */,
+			);
+			name = "Tab Bar Views";
+			sourceTree = "<group>";
+		};
+		B7E8D5E425773FD800710667 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7E8D5E525773FED00710667 /* API Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "API Data";
+			sourceTree = "<group>";
+		};
+		B7E8D5E62577400A00710667 /* Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Core Data Model";
+			sourceTree = "<group>";
+		};
+		B7E8D5E72577401300710667 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		B7E8D5E82577401E00710667 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8D5CC25773C5F00710667 /* AppDelegate.swift */,
+				B7E8D5CE25773C5F00710667 /* SceneDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		B7E8D5E92577407A00710667 /* Shelters */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8D5F32577413B00710667 /* Shelters.swift */,
+			);
+			name = Shelters;
+			sourceTree = "<group>";
+		};
+		B7E8D5EA2577408F00710667 /* Find Animals */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8D5F12577411E00710667 /* FindAnimals.swift */,
+			);
+			name = "Find Animals";
+			sourceTree = "<group>";
+		};
+		B7E8D5EB2577409700710667 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8D5EF2577410000710667 /* FavoritesList.swift */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		B7E8D5EC2577409F00710667 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8D5ED257740D400710667 /* Home.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +198,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "CS3714-91386 Team 16";
 				TargetAttributes = {
 					B7E8D5C825773C5F00710667 = {
 						CreatedOnToolsVersion = 12.0;
@@ -150,8 +243,12 @@
 			files = (
 				B7E8D5CD25773C5F00710667 /* AppDelegate.swift in Sources */,
 				B7E8D5CF25773C5F00710667 /* SceneDelegate.swift in Sources */,
+				B7E8D5F22577411E00710667 /* FindAnimals.swift in Sources */,
+				B7E8D5F42577413B00710667 /* Shelters.swift in Sources */,
+				B7E8D5EE257740D400710667 /* Home.swift in Sources */,
 				B7E8D5D425773C5F00710667 /* AnimalRescue.xcdatamodeld in Sources */,
 				B7E8D5D125773C5F00710667 /* ContentView.swift in Sources */,
+				B7E8D5F02577410000710667 /* FavoritesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
