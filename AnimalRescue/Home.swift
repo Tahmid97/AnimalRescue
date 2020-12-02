@@ -19,6 +19,8 @@ struct Home: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     
+                    Text("Animal Rescue")
+                    
                     Image("\(userData.imageNumber + 1)")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
