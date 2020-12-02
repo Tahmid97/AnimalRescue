@@ -20,6 +20,8 @@ struct Home: View {
                 VStack {
                     
                     Text("Animal Rescue")
+                        .font(.custom("Helvetica Neue", size: 30))
+                        .padding(.top, 100)
                     
                     Image("\(userData.imageNumber + 1)")
                         .resizable()
@@ -78,6 +80,17 @@ struct Home: View {
                     .imageScale(.medium)
                     .font(Font.title.weight(.regular))
                     .padding(.bottom, 50)
+                    
+                    Text("Powered By:")
+                        .padding(.bottom, 20)
+                    
+                    // Show Rescue Group's website in default web browser
+                    Link(destination: URL(string: "https://rescuegroups.org/services/adoptable-pet-data-api/")!) {
+                        HStack {
+                            Image(systemName: "gearshape.2")
+                            Text("RescueGroups.org")
+                        }
+                    }
                     
                     
                 }   // End of VStack
