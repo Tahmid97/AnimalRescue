@@ -26,6 +26,7 @@ struct CatFactsList: View {
     }   // End of body
  
 }
+
 struct CatFactsList_Previews: PreviewProvider {
     static var previews: some View {
         CatFactsList()
