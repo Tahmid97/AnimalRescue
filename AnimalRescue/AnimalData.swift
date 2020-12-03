@@ -19,27 +19,6 @@ var animalStructList = [Animal]()
  "id|name|alpha2code|capital|languages|currency"
  */
 var orderedSearchableAnimalsList = [String]()
-//var movieListSortedAction = [Movie]()
-//var movieListSortedAdventure = [Movie]()
-//var movieListSortedAnimation = [Movie]()
-//var movieListSortedBiography = [Movie]()
-//var movieListSortedComedy = [Movie]()
-//var movieListSortedCrime = [Movie]()
-//var movieListSortedDocumentary = [Movie]()
-//var movieListSortedDrama = [Movie]()
-//var movieListSortedFamily = [Movie]()
-//var movieListSortedFantasy = [Movie]()
-//var movieListSortedHorror = [Movie]()
-//var movieListSortedMusic = [Movie]()
-//var movieListSortedMystery = [Movie]()
-//var movieListSortedRomance = [Movie]()
-//var movieListSortedScifi = [Movie]()
-//var movieListSortedSuspense = [Movie]()
-//var movieListSortedThriller = [Movie]()
-//var movieListSortedWar = [Movie]()
-//var movieListSortedWestern = [Movie]()
-
-
 
 
 /*
@@ -82,7 +61,7 @@ public func readAnimalsDataFiles() {
          The CountriesData.json file exists in document directory on the user's device.
          Load it from Document Directory into countryStructList.
          */
-        
+        print("Trying to load AnimalsData from document directory.")
         // The function is given in UtilityFunctions.swift
         animalStructList = decodeJsonFileIntoArrayOfStructs(fullFilename: animalsDataFullFilename, fileLocation: "Document Directory")
         print("AnimalsData is loaded from document directory")
@@ -100,7 +79,7 @@ public func readAnimalsDataFiles() {
          This catch section will be executed only once when the app is launched for the first time
          since we write and read the files in document directory on the user's device after first use.
          */
-        
+        print("Trying to load AnimalsData from Main Bundle.")
         // The function is given in UtilityFunctions.swift
         animalStructList = decodeJsonFileIntoArrayOfStructs(fullFilename: animalsDataFullFilename, fileLocation: "Main Bundle")
         print("AnimalsData is loaded from main bundle")

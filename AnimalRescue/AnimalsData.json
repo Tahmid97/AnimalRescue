@@ -1,17 +1,27 @@
 [
     {
-        "id": "1",
+        "id": "5200FD42-978F-4906-893E-AE3162CC4DAA",
         "animalType": "cat",
-        "photoUrl": ""
+        "photoUrl": "https://purr.objects-us-east-1.dream.io/i/img_20170824_234042693.jpg"
     },
     {
-        "id": "2",
+        "id": "5DE1108F-845D-4CC8-8385-D0C472D41DE8",
         "animalType": "dog",
-        "photoUrl": ""
+        "photoUrl": "https://images.dog.ceo/breeds/cairn/n02096177_11135.jpg"
     },
     {
-        "id": "3",
+        "id": "D6D27088-4A8D-4662-9CC6-139147457BFB",
         "animalType": "fox",
-        "photoUrl": ""
+        "photoUrl": "https://randomfox.ca/images/110.jpg"
+    },
+    {
+        "id": "B7F1AF1D-1653-4AD4-9632-C5243CD74583",
+        "animalType": "dog",
+        "photoUrl": "https://images.dog.ceo/breeds/airedale/n02096051_2002.jpg"
+    },
+    {
+        "id": "5DE1108F-845D-4CC8-8385-D0C482D41DE8",
+        "animalType": "fox",
+        "photoUrl": "https://randomfox.ca/images/78.jpg"
     }
 ]

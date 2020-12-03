@@ -17,7 +17,6 @@ struct FavoriteItem: View {
         HStack {
             // Public function getImageFromUrl is given in UtilityFunctions.swift
             getImageFromUrl(url:"\(animal.photoUrl)", defaultFilename: "ImageUnavailable")
-                
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 80.0)
