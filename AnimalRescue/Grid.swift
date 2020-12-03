@@ -7,20 +7,20 @@
 //
 
 import SwiftUI
- 
+
 fileprivate var selectedAnimal = catsGridList[0]
- 
+
 struct Grid: View {
-   
+    
     // Subscribe to changes in UserData
     @EnvironmentObject var userData: UserData
-   
+    
     @State private var showAnimalInfoAlert = false
-   
+    
     // Fit as many images per row as possible with minimum image width of 100 points each.
     // spacing defines spacing between columns
     let columns = [ GridItem(.adaptive(minimum: 100), spacing: 3) ]
-   
+    
     var body: some View {
         ScrollView {
             // spacing defines spacing between rows
@@ -31,27 +31,28 @@ struct Grid: View {
                     getImageFromUrl(url: animal.photoUrl, defaultFilename: "ImageUnavailable")
                         .resizable()
                         .scaledToFit()
+                        .frame(minWidth: 120, maxWidth: 120, minHeight: 120, maxHeight: 120, alignment: .center)
                         .onTapGesture {
                             selectedAnimal = animal
                             self.showAnimalInfoAlert = true
                         }
                 }
             }   // End of LazyVGrid
-                .padding()
-           
+            .padding()
+            
         }   // End of ScrollView
-            .alert(isPresented: $showAnimalInfoAlert, content: { self.animalInfoAlert })
+        .alert(isPresented: $showAnimalInfoAlert, content: { self.animalInfoAlert })
     }
-   
+    
     var animalInfoAlert: Alert {
         Alert(title: Text("Type of animal: " + selectedAnimal.animalType),
               dismissButton: .default(Text("OK")))
     }
-   
+    
 }
 
 struct Grid_Previews: PreviewProvider {
     static var previews: some View {
-       Grid()
+        Grid()
     }
 }

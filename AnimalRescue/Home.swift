@@ -19,7 +19,7 @@ struct Home: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     
-                    Text("Animal Rescue")
+                    Text("Animal Therapy")
                         .font(.custom("Helvetica Neue", size: 30))
                         .padding(.top, 100)
                     
@@ -82,13 +82,27 @@ struct Home: View {
                     .padding(.bottom, 50)
                     
                     Text("Powered By:")
-                        .padding(.bottom, 20)
+                        .padding(.bottom, 10)
                     
                     // Show Rescue Group's website in default web browser
-                    Link(destination: URL(string: "https://rescuegroups.org/services/adoptable-pet-data-api/")!) {
+                    Link(destination: URL(string: "https://cat-fact.herokuapp.com/#/")!) {
                         HStack {
                             Image(systemName: "gearshape.2")
-                            Text("RescueGroups.org")
+                            Text("Cat Facts API")
+                                .padding(.bottom, 10)
+                        }
+                    }
+                    Link(destination: URL(string: "https://dog.ceo/dog-api/")!) {
+                        HStack {
+                            Image(systemName: "gearshape.2")
+                            Text("Dog API")
+                                .padding(.bottom, 10)
+                        }
+                    }
+                    Link(destination: URL(string: "https://randomfox.ca/")!) {
+                        HStack {
+                            Image(systemName: "gearshape.2")
+                            Text("RandomFox API")
                         }
                     }
                     

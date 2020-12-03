@@ -46,11 +46,11 @@ final class UserData: ObservableObject {
     // Publish imageNumber to refresh the View body in Home.swift when it is changed in the slide show
     @Published var imageNumber = 0
     @Published var animalsList = animalStructList
-     /*
-      Publish searchableOrderedCompaniesList with initial value of
-      orderedSearchableCompaniesList obtained in CompanyData.swift
-      */
-     @Published var searchableOrderedAnimalsList = orderedSearchableAnimalsList
+    /*
+     Publish searchableOrderedCompaniesList with initial value of
+     orderedSearchableCompaniesList obtained in CompanyData.swift
+     */
+    @Published var searchableOrderedAnimalsList = orderedSearchableAnimalsList
     
     /*
      --------------------------

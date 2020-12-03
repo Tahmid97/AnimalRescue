@@ -96,7 +96,6 @@
 				B7E8D5D525773C6000710667 /* Assets.xcassets */,
 				B7E8D5DA25773C6000710667 /* LaunchScreen.storyboard */,
 				B7E8D5DD25773C6000710667 /* Info.plist */,
-				B7E8D5D225773C5F00710667 /* AnimalRescue.xcdatamodeld */,
 				B7E8D5D725773C6000710667 /* Preview Content */,
 			);
 			path = AnimalRescue;
@@ -142,6 +141,7 @@
 		B7E8D5E62577400A00710667 /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				B7E8D5D225773C5F00710667 /* AnimalRescue.xcdatamodeld */,
 			);
 			name = "Core Data Model";
 			sourceTree = "<group>";
