@@ -10,16 +10,8 @@ import SwiftUI
 
 struct Animal: Hashable, Codable, Identifiable {
   
-   var id: UUID        // Storage Type: String, Use Type (format): UUID
-    var name: String
-   var species: String
-   var ageGroup: String
-   var breed: String
-   var photoUrl: String
-   var colors: String
-   var organization: String           // In square kilometers
-   var longitude: Int
-   var latitude: Int
+    var id: UUID        // Storage Type: String, Use Type (format): UUID
+    var animalType: String
+    var photoUrl: String
 
 }
-

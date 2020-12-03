@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26D3C8AA2578782700BD6951 /* AnimalsApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3C8A92578782700BD6951 /* AnimalsApiData.swift */; };
 		B76E832F25784BF70042D13C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E832E25784BF70042D13C /* UserData.swift */; };
 		B7CD41132578584600A6FF7D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD41122578584600A6FF7D /* SearchBar.swift */; };
 		B7CD411A257859CB00A6FF7D /* AnimalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD4119257859CB00A6FF7D /* AnimalData.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26D3C8A92578782700BD6951 /* AnimalsApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsApiData.swift; sourceTree = "<group>"; };
 		B76E832E25784BF70042D13C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B7CD41122578584600A6FF7D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B7CD4119257859CB00A6FF7D /* AnimalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalData.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		B7E8D5E525773FED00710667 /* API Data */ = {
 			isa = PBXGroup;
 			children = (
+				26D3C8A92578782700BD6951 /* AnimalsApiData.swift */,
 			);
 			name = "API Data";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				B7E8D5CD25773C5F00710667 /* AppDelegate.swift in Sources */,
 				B7CD41292578676900A6FF7D /* NavigationStyle.swift in Sources */,
 				B7CD411A257859CB00A6FF7D /* AnimalData.swift in Sources */,
+				26D3C8AA2578782700BD6951 /* AnimalsApiData.swift in Sources */,
 				B7E8D5CF25773C5F00710667 /* SceneDelegate.swift in Sources */,
 				B7CD41262578673000A6FF7D /* FavoriteDetails.swift in Sources */,
 				B7E8D5F22577411E00710667 /* Grid.swift in Sources */,
