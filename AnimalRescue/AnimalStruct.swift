@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-struct Animal: Hashable, Codable, Identifiable {
+public struct Animal: Hashable, Codable, Identifiable {
   
-    var id: UUID        // Storage Type: String, Use Type (format): UUID
+    public var id: UUID        // Storage Type: String, Use Type (format): UUID
     var animalType: String
     var photoUrl: String
 

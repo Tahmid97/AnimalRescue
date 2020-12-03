@@ -8,7 +8,7 @@
 
 import SwiftUI
  
-fileprivate var selectedAnimal = animalStructList[0]
+fileprivate var selectedAnimal = catsGridList[0]
  
 struct Grid: View {
    
@@ -26,7 +26,7 @@ struct Grid: View {
             // spacing defines spacing between rows
             LazyVGrid(columns: columns, spacing: 3) {
                 // 🔴 Specifying id: \.self is critically important to prevent photos being listed as out of order
-                ForEach(self.userData.animalsList, id: \.self) { animal in
+                ForEach(randomAnimalsList, id: \.self) { animal in
                     // Public function getImageFromUrl is given in UtilityFunctions.swift
                     getImageFromUrl(url: animal.photoUrl, defaultFilename: "ImageUnavailable")
                         .resizable()

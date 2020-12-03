@@ -18,6 +18,38 @@
             endingLineNumber = "20"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DE778625-A30A-4571-9BBC-D70FD1E29A6D - d83f6bf8bb2ac95d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimalRescue.FavoriteDetails.body.getter : some"
+                  moduleName = "AnimalRescue"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sami/Projects/Swift%20Tutorials/AnimalRescue/AnimalRescue/FavoriteDetails.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "626">
+               </Location>
+               <Location
+                  uuid = "DE778625-A30A-4571-9BBC-D70FD1E29A6D - e1ab9da1e84a24aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.Group&lt;SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.Text, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.Text, SwiftUI.EmptyView&gt;)&gt;&gt; in AnimalRescue.FavoriteDetails.body.getter : some"
+                  moduleName = "AnimalRescue"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sami/Projects/Swift%20Tutorials/AnimalRescue/AnimalRescue/FavoriteDetails.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
