@@ -21,9 +21,9 @@ struct FavoritesList: View {
                
                 ForEach(userData.searchableOrderedAnimalsList.filter {self.searchItem.isEmpty ? true : $0.localizedStandardContains(self.searchItem)}, id: \.self)
                 { item in
-                    NavigationLink(destination: FavoriteDetails(movie: self.searchItemAnimal(searchListItem: item)))
+                    NavigationLink(destination: FavoriteDetails(animal: self.searchItemAnimal(searchListItem: item)))
                     {
-                        FavoriteItem(movie: self.searchItemAnimal(searchListItem: item))
+                        FavoriteItem(animal: self.searchItemAnimal(searchListItem: item))
                     }
                 }
                 .onDelete(perform: delete)
@@ -47,7 +47,7 @@ struct FavoritesList: View {
         // Find the index number of countriesList matching the country attribute 'id'
         let index = userData.animalsList.firstIndex(where: {$0.id.uuidString == searchListItem.components(separatedBy: "|")[0]})!
 
-        return userData.moviesList[index]
+        return userData.animalsList[index]
     }
 
     /*

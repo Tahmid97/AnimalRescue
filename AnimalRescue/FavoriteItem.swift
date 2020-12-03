@@ -16,11 +16,11 @@ struct FavoriteItem: View {
     var body: some View {
         HStack {
             // Public function getImageFromUrl is given in UtilityFunctions.swift
-            getImageFromUrl(url:"https://image.tmdb.org/t/p/w500/\(movie.posterFileName)", defaultFilename: "ImageUnavailable")
-
-            .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 80.0)
+//            getImageFromUrl(url:"https://image.tmdb.org/t/p/w500/\(movie.posterFileName)", defaultFilename: "ImageUnavailable")
+//
+//            .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 80.0)
            
             VStack(alignment: .leading) {
                 Text(animal.name)
