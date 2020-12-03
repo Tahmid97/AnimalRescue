@@ -24,7 +24,7 @@
 		B7E8D5DC25773C6000710667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E8D5DA25773C6000710667 /* LaunchScreen.storyboard */; };
 		B7E8D5EE257740D400710667 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5ED257740D400710667 /* Home.swift */; };
 		B7E8D5F02577410000710667 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5EF2577410000710667 /* FavoritesList.swift */; };
-		B7E8D5F22577411E00710667 /* FindAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F12577411E00710667 /* FindAnimals.swift */; };
+		B7E8D5F22577411E00710667 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F12577411E00710667 /* Grid.swift */; };
 		B7E8D5F42577413B00710667 /* Shelters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F32577413B00710667 /* Shelters.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		B7E8D5DD25773C6000710667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E8D5ED257740D400710667 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B7E8D5EF2577410000710667 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
-		B7E8D5F12577411E00710667 /* FindAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAnimals.swift; sourceTree = "<group>"; };
+		B7E8D5F12577411E00710667 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		B7E8D5F32577413B00710667 /* Shelters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shelters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,7 @@
 			children = (
 				B7E8D5EC2577409F00710667 /* Home */,
 				B7E8D5EB2577409700710667 /* Favorites */,
-				B7E8D5EA2577408F00710667 /* Find Animals */,
+				B7E8D5EA2577408F00710667 /* Grid */,
 				B7E8D5E92577407A00710667 /* Shelters */,
 			);
 			name = "Tab Bar Views";
@@ -168,12 +168,12 @@
 			name = Shelters;
 			sourceTree = "<group>";
 		};
-		B7E8D5EA2577408F00710667 /* Find Animals */ = {
+		B7E8D5EA2577408F00710667 /* Grid */ = {
 			isa = PBXGroup;
 			children = (
-				B7E8D5F12577411E00710667 /* FindAnimals.swift */,
+				B7E8D5F12577411E00710667 /* Grid.swift */,
 			);
-			name = "Find Animals";
+			name = Grid;
 			sourceTree = "<group>";
 		};
 		B7E8D5EB2577409700710667 /* Favorites */ = {
@@ -270,7 +270,7 @@
 				B7CD411A257859CB00A6FF7D /* AnimalData.swift in Sources */,
 				B7E8D5CF25773C5F00710667 /* SceneDelegate.swift in Sources */,
 				B7CD41262578673000A6FF7D /* FavoriteDetails.swift in Sources */,
-				B7E8D5F22577411E00710667 /* FindAnimals.swift in Sources */,
+				B7E8D5F22577411E00710667 /* Grid.swift in Sources */,
 				B7CD411D25785A1A00A6FF7D /* AnimalStruct.swift in Sources */,
 				B76E832F25784BF70042D13C /* UserData.swift in Sources */,
 				B7E8D5F42577413B00710667 /* Shelters.swift in Sources */,
