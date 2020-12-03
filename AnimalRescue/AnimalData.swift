@@ -161,7 +161,7 @@ public func writeAnimalsDataFiles() {
      */
     
     // Obtain URL of the JSON file into which data will be written
-    let urlOfJsonFileInDocumentDirectory: URL? = documentDirectory.appendingPathComponent("AnimalData.json")
+    let urlOfJsonFileInDocumentDirectory: URL? = documentDirectory.appendingPathComponent("AnimalsData.json")
     
     // Encode countryStructList into JSON and write it into the JSON file
     let encoder = JSONEncoder()

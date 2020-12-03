@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		26D3C8AA2578782700BD6951 /* AnimalsApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3C8A92578782700BD6951 /* AnimalsApiData.swift */; };
 		26D3C8AF25789D3C00BD6951 /* CatFactsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3C8AE25789D3C00BD6951 /* CatFactsItem.swift */; };
+		B7502A822578B8ED00ADF001 /* AnimalsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B7502A812578B8ED00ADF001 /* AnimalsData.json */; };
 		B76E832F25784BF70042D13C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E832E25784BF70042D13C /* UserData.swift */; };
 		B7CD41132578584600A6FF7D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD41122578584600A6FF7D /* SearchBar.swift */; };
 		B7CD411A257859CB00A6FF7D /* AnimalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD4119257859CB00A6FF7D /* AnimalData.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		26D3C8A92578782700BD6951 /* AnimalsApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsApiData.swift; sourceTree = "<group>"; };
 		26D3C8AE25789D3C00BD6951 /* CatFactsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsItem.swift; sourceTree = "<group>"; };
+		B7502A812578B8ED00ADF001 /* AnimalsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimalsData.json; sourceTree = "<group>"; };
 		B76E832E25784BF70042D13C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B7CD41122578584600A6FF7D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B7CD4119257859CB00A6FF7D /* AnimalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalData.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				B76E832E25784BF70042D13C /* UserData.swift */,
 				B7CD4119257859CB00A6FF7D /* AnimalData.swift */,
 				B7CD411C25785A1A00A6FF7D /* AnimalStruct.swift */,
+				B7502A812578B8ED00ADF001 /* AnimalsData.json */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				B7E8D5DC25773C6000710667 /* LaunchScreen.storyboard in Resources */,
 				B7E8D5D925773C6000710667 /* Preview Assets.xcassets in Resources */,
 				B7E8D5D625773C6000710667 /* Assets.xcassets in Resources */,
+				B7502A822578B8ED00ADF001 /* AnimalsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

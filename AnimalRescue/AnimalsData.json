@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "animalType": "cat",
+        "photoUrl": ""
+    },
+    {
+        "id": "2",
+        "animalType": "dog",
+        "photoUrl": ""
+    },
+    {
+        "id": "3",
+        "animalType": "fox",
+        "photoUrl": ""
+    }
+]
