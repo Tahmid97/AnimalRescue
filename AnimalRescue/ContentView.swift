@@ -22,13 +22,13 @@ struct ContentView: View {
                 }
             Grid()
                 .tabItem {
-                    Image(systemName: "magnifyingglass.circle.fill")
-                    Text("Find Animals")
+                    Image(systemName: "square.grid.3x3.fill")
+                    Text("Cute Animals")
                 }
-            Shelters()
+            CatFactsList()
                 .tabItem {
                     Image(systemName: "map.fill")
-                    Text("Shelters")
+                    Text("Cat Facts")
                 }
         }   // End of TabView
         .font(.headline)
