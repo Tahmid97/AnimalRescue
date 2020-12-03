@@ -21,7 +21,7 @@ struct FavoriteDetails: View {
         Form {
             Group {
                 Section(header: Text("Animal Name")) {
-                    Text(animal.name)
+                    Text(animal.animalType)
                 }
 //                Section(header: Text("Movie Poster")) {
 //                    // Public function getImageFromUrl is given in UtilityFunctions.swift
@@ -48,13 +48,13 @@ struct FavoriteDetails: View {
 //                    }
 //                }
                 Section(header: Text("animal Age")) {
-                    Text(animal.ageGroup)
+                    Text(animal.animalType)
                 }
             }
 
  
         }   // End of Form
-        .navigationBarTitle(Text("\(animal.name)"), displayMode: .inline)
+        .navigationBarTitle(Text("\(animal.animalType)"), displayMode: .inline)
             .font(.system(size: 14))
        
     }   // End of body

@@ -120,7 +120,7 @@ public func readAnimalsDataFiles() {
          For example, to obtain the id: list item.components(separatedBy: "|")[0]
          */
         for animal in animalStructList {
-            let selectedAnimalAttributesForSearch = "\(animal.id)|\(animal.species)|\(animal.ageGroup)|\(animal.breed)|\(animal.colors)|\(animal.organization)"
+            let selectedAnimalAttributesForSearch = "\(animal.id)|\(animal.animalType)"
            
             orderedSearchableAnimalsList.append(selectedAnimalAttributesForSearch)
         }

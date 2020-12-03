@@ -8,14 +8,14 @@
 
 import SwiftUI
  
-fileprivate var selectedCountry = countryStructList[0]
+fileprivate var selectedAnimal = animalStructList[0]
  
-struct FlagsGrid: View {
+struct Grid: View {
    
     // Subscribe to changes in UserData
     @EnvironmentObject var userData: UserData
    
-    @State private var showCountryInfoAlert = false
+    @State private var showAnimalInfoAlert = false
    
     // Fit as many images per row as possible with minimum image width of 100 points each.
     // spacing defines spacing between columns
@@ -26,33 +26,32 @@ struct FlagsGrid: View {
             // spacing defines spacing between rows
             LazyVGrid(columns: columns, spacing: 3) {
                 // 🔴 Specifying id: \.self is critically important to prevent photos being listed as out of order
-                ForEach(self.userData.countriesList, id: \.self) { country in
+                ForEach(self.userData.animalsList, id: \.self) { animal in
                     // Public function getImageFromUrl is given in UtilityFunctions.swift
-                    getImageFromUrl(url: country.flagImageUrl, defaultFilename: "ImageUnavailable")
+                    getImageFromUrl(url: animal.photoUrl, defaultFilename: "ImageUnavailable")
                         .resizable()
                         .scaledToFit()
                         .onTapGesture {
-                            selectedCountry = country
-                            self.showCountryInfoAlert = true
+                            selectedAnimal = animal
+                            self.showAnimalInfoAlert = true
                         }
                 }
             }   // End of LazyVGrid
                 .padding()
            
         }   // End of ScrollView
-            .alert(isPresented: $showCountryInfoAlert, content: { self.countryInfoAlert })
+            .alert(isPresented: $showAnimalInfoAlert, content: { self.animalInfoAlert })
     }
    
-    var countryInfoAlert: Alert {
-        Alert(title: Text(selectedCountry.name),
-              message: Text("Capital City: \(selectedCountry.capital)\nPopulation: \(self.countryPopulation(country: selectedCountry))\nLanguages: \(selectedCountry.languages)\nCurrency: \(selectedCountry.currency)"),
-              dismissButton: .default(Text("OK")) )
+    var animalInfoAlert: Alert {
+        Alert(title: Text("Type of animal: " + selectedAnimal.animalType),
+              dismissButton: .default(Text("OK")))
     }
    
 }
 
-struct FindAnimals_Previews: PreviewProvider {
+struct Grid_Previews: PreviewProvider {
     static var previews: some View {
-        FindAnimals()
+       Grid()
     }
 }

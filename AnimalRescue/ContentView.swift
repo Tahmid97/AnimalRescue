@@ -20,7 +20,7 @@ struct ContentView: View {
                     Image(systemName: "heart.fill")
                     Text("Favorites")
                 }
-            FindAnimals()
+            Grid()
                 .tabItem {
                     Image(systemName: "magnifyingglass.circle.fill")
                     Text("Find Animals")

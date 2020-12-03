@@ -23,12 +23,12 @@ struct FavoriteItem: View {
 //                .frame(width: 80.0)
            
             VStack(alignment: .leading) {
-                Text(animal.name)
+                Text(animal.animalType)
                 HStack {
 
-                    Text("\(animal.ageGroup)")
+                    Text("\(animal.animalType)")
                 }
-                Text("\(animal.breed)")
+                Text("\(animal.animalType)")
              
             }
             // Set font and size for the whole VStack content
