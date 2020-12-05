@@ -48,7 +48,7 @@ struct FavoriteDetails: View {
 //                    }
 //                }
                 Section(header: Text("animal Age")) {
-                    Text(animal.animalType)
+                    Text("\(animal.animalType)")
                 }
             }
 

@@ -110,7 +110,7 @@ public func getAnimalRescueDataFromApi() {
             }
             
             let meta = jsonDataDictionary["meta"] as! [String: Any]
-            let count = meta["count"] as! Int
+            _ = meta["count"] as! Int
 
             print(jsonDataDictionary)
             
