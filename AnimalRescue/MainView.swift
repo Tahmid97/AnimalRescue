@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-
 struct MainView: View {
     var body: some View {
         TabView {
@@ -40,6 +39,7 @@ struct MainView: View {
         .imageScale(.medium)
         .font(Font.title.weight(.regular))
     }
+
 }
 
 struct MainView_Previews: PreviewProvider {
@@ -47,3 +47,6 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
+
+
+
