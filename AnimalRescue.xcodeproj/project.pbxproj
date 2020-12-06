@@ -19,6 +19,10 @@
 		B7CD41232578671F00A6FF7D /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD41222578671F00A6FF7D /* FavoriteItem.swift */; };
 		B7CD41262578673000A6FF7D /* FavoriteDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD41252578673000A6FF7D /* FavoriteDetails.swift */; };
 		B7CD41292578676900A6FF7D /* NavigationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD41282578676900A6FF7D /* NavigationStyle.swift */; };
+		B7CD4133257C654E00A6FF7D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD4132257C654E00A6FF7D /* MainView.swift */; };
+		B7CD4136257C656000A6FF7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD4135257C656000A6FF7D /* LoginView.swift */; };
+		B7CD4139257C65E000A6FF7D /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD4138257C65E000A6FF7D /* ResetPassword.swift */; };
+		B7CD413C257C685700A6FF7D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD413B257C685700A6FF7D /* Setting.swift */; };
 		B7E8D5CD25773C5F00710667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5CC25773C5F00710667 /* AppDelegate.swift */; };
 		B7E8D5CF25773C5F00710667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5CE25773C5F00710667 /* SceneDelegate.swift */; };
 		B7E8D5D125773C5F00710667 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5D025773C5F00710667 /* ContentView.swift */; };
@@ -45,6 +49,10 @@
 		B7CD41222578671F00A6FF7D /* FavoriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
 		B7CD41252578673000A6FF7D /* FavoriteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetails.swift; sourceTree = "<group>"; };
 		B7CD41282578676900A6FF7D /* NavigationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStyle.swift; sourceTree = "<group>"; };
+		B7CD4132257C654E00A6FF7D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B7CD4135257C656000A6FF7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B7CD4138257C65E000A6FF7D /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
+		B7CD413B257C685700A6FF7D /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		B7E8D5C925773C5F00710667 /* AnimalRescue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRescue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E8D5CC25773C5F00710667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E8D5CE25773C5F00710667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +79,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7CD4131257C636F00A6FF7D /* Startup Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7E8D5D025773C5F00710667 /* ContentView.swift */,
+				B7CD4132257C654E00A6FF7D /* MainView.swift */,
+				B7CD4135257C656000A6FF7D /* LoginView.swift */,
+				B7CD4138257C65E000A6FF7D /* ResetPassword.swift */,
+			);
+			name = "Startup Views";
+			sourceTree = "<group>";
+		};
 		B7E8D5C025773C5F00710667 = {
 			isa = PBXGroup;
 			children = (
@@ -90,12 +109,12 @@
 		B7E8D5CB25773C5F00710667 /* AnimalRescue */ = {
 			isa = PBXGroup;
 			children = (
-				B7E8D5E82577401E00710667 /* Delegates */,
 				B7E8D5E72577401300710667 /* Data Model */,
+				B7CD4131257C636F00A6FF7D /* Startup Views */,
+				B7E8D5E82577401E00710667 /* Delegates */,
 				B7E8D5E62577400A00710667 /* Core Data Model */,
 				B7E8D5E525773FED00710667 /* API Data */,
 				B7E8D5E425773FD800710667 /* Supporting Files */,
-				B7E8D5D025773C5F00710667 /* ContentView.swift */,
 				B7E8D5E325773FA800710667 /* Tab Bar Views */,
 				B7E8D5D525773C6000710667 /* Assets.xcassets */,
 				B7E8D5DA25773C6000710667 /* LaunchScreen.storyboard */,
@@ -120,6 +139,7 @@
 				B7E8D5EB2577409700710667 /* Favorites */,
 				B7E8D5EA2577408F00710667 /* Grid */,
 				B7E8D5E92577407A00710667 /* Cat Facts */,
+				B7CD413B257C685700A6FF7D /* Setting.swift */,
 			);
 			name = "Tab Bar Views";
 			sourceTree = "<group>";
@@ -291,10 +311,14 @@
 				B7E8D5EE257740D400710667 /* Home.swift in Sources */,
 				26D3C8AF25789D3C00BD6951 /* CatFactsItem.swift in Sources */,
 				B7E8D5D425773C5F00710667 /* AnimalRescue.xcdatamodeld in Sources */,
+				B7CD4133257C654E00A6FF7D /* MainView.swift in Sources */,
 				B7CD41132578584600A6FF7D /* SearchBar.swift in Sources */,
+				B7CD4136257C656000A6FF7D /* LoginView.swift in Sources */,
+				B7CD4139257C65E000A6FF7D /* ResetPassword.swift in Sources */,
 				B7405D9C2579499700F791DE /* RescueGroupsApiData.swift in Sources */,
 				B7CD412025785CD700A6FF7D /* UtilityFunctions.swift in Sources */,
 				B7E8D5D125773C5F00710667 /* ContentView.swift in Sources */,
+				B7CD413C257C685700A6FF7D /* Setting.swift in Sources */,
 				B7CD41232578671F00A6FF7D /* FavoriteItem.swift in Sources */,
 				B7E8D5F02577410000710667 /* FavoritesList.swift in Sources */,
 			);

@@ -52,6 +52,9 @@ final class UserData: ObservableObject {
      */
     @Published var searchableOrderedAnimalsList = orderedSearchableAnimalsList
     
+    // Publish if the user is authenticated or not
+    @Published var userAuthenticated = false
+   
     /*
      --------------------------
      MARK: - Scheduling a Timer
