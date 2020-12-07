@@ -99,10 +99,10 @@ struct Home: View {
                                 .padding(.bottom, 10)
                         }
                     }
-                    Link(destination: URL(string: "https://randomfox.ca/")!) {
+                    Link(destination: URL(string: "https://test1-api.rescuegroups.org/v5/public/docs")!) {
                         HStack {
                             Image(systemName: "gearshape.2")
-                            Text("RandomFox API")
+                            Text("RescueGroup API")
                         }
                     }
                     

@@ -23,14 +23,19 @@ struct FavoriteDetails: View {
                 Section(header: Text("Animal Name")) {
                     Text(animal.name)
                 }
-//                Section(header: Text("Movie Poster")) {
-//                    // Public function getImageFromUrl is given in UtilityFunctions.swift
-//                    getImageFromUrl(url:"https://image.tmdb.org/t/p/w500/\(movie.posterFileName)", defaultFilename: "ImageUnavailable")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width: 350)
-//
-//                }
+                Section(header: Text("Species")) {
+                    Text(animal.species)
+                }
+                Section(header: Text("Breed")) {
+                    Text(animal.breedString)
+                }
+                Section(header: Text("Animal looks")) {
+                    // Public function getImageFromUrl is given in UtilityFunctions.swift
+                    getImageFromUrl(url:animal.photoUrl, defaultFilename: "ImageUnavailable")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 350)
+                }
 //                Section(header: Text("Play movie trailer")) {
 //                    NavigationLink(destination:
 //                                    WebView(url: "http://www.youtube.com/embed/\(movie.youTubeTrailerId)")
@@ -47,14 +52,35 @@ struct FavoriteDetails: View {
 //                        .frame(minWidth: 300, maxWidth: 500, alignment: .leading)
 //                    }
 //                }
-                Section(header: Text("animal Age")) {
+                
+                Section(header: Text("Animal Age")) {
                     Text("\(animal.ageString)")
                 }
+                Section(header: Text("Animal Sex")) {
+                    Text("\(animal.sex)")
+                }
+
+                Section(header: Text("Animal Age group")) {
+                    Text("\(animal.ageGroup), \(animal.ageString)")
+                }
+              
+                Section(header: Text("Color Details")) {
+                    Text("\(animal.colorDetails)")
+                }
+                Section(header: Text("Birth Date")) {
+                    Text("\(animal.birthDate)")
+                }
+
+                Section(header: Text("Adoption fees")) {
+                    Text("\(animal.adoptionFeeString) Dollars")
+                }
+
+                
             }
 
  
         }   // End of Form
-        .navigationBarTitle(Text("\(animal.species)"), displayMode: .inline)
+        .navigationBarTitle(Text("\(animal.name)"), displayMode: .inline)
             .font(.system(size: 14))
        
     }   // End of body
