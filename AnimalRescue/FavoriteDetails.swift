@@ -59,10 +59,10 @@ struct FavoriteDetails: View {
                 Section(header: Text("Animal Sex")) {
                     Text("\(animal.sex)")
                 }
-
                 Section(header: Text("Animal Age group")) {
                     Text("\(animal.ageGroup), \(animal.ageString)")
                 }
+            }
               
                 Section(header: Text("Color Details")) {
                     Text("\(animal.colorDetails)")
@@ -72,11 +72,36 @@ struct FavoriteDetails: View {
                 }
 
                 Section(header: Text("Adoption fees")) {
-                    Text("\(animal.adoptionFeeString) Dollars")
-                }
+                    if animal.adoptionFeeString != "Not Listed"{
 
-                
+                    Text("\(animal.adoptionFeeString) Dollars")
+                    }
+                    else{
+                        Text("\(animal.adoptionFeeString)")
+
+                    }
+                }
+            if animal.url != "Not Listed"{
+                Section(header: Text("For more Information")) {
+                    NavigationLink(destination:
+                                    WebView(url: animal.url)
+                                    .navigationBarTitle(Text("\(animal.name)"), displayMode: .inline)
+                    ){
+                        HStack {
+                            Image(systemName: "gear")
+                                .imageScale(.medium)
+                                .font(Font.title.weight(.regular))
+                                .foregroundColor(.blue)
+                            Text("More about \(animal.name)")
+                                .font(.system(size: 16))
+                        }
+                        .frame(minWidth: 300, maxWidth: 500, alignment: .leading)
+                    }
+                }
             }
+                
+                
+            
 
  
         }   // End of Form
