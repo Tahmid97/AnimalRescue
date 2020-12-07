@@ -10,7 +10,6 @@ import SwiftUI
 import LocalAuthentication
 
 struct LoginView : View {
-    @State private var isUnlocked = false
 
     // Subscribe to changes in UserData
     @EnvironmentObject var userData: UserData
@@ -45,7 +44,7 @@ struct LoginView : View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 300, height: 36)
                         .padding()
-                    VStack{
+                    HStack{
                         Button(action: {
                             /*
                              UserDefaults provides an interface to the user’s defaults database,
@@ -79,27 +78,27 @@ struct LoginView : View {
                             
                         }
                         .alert(isPresented: $showInvalidPasswordAlert, content: { self.invalidPasswordAlert })
-                        Button(action: {
-                          authenticate()
-                            if self.isUnlocked {
-                                userData.userAuthenticated = true
-                              //  self.showInvalidFaceAlert = false
-                            } else {
-                       //        self.showInvalidFaceAlert = true
-                            }
-                            
-                        }) {
-                            Text("Face ID")
-                                .frame(width: 100, height: 36, alignment: .center)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .strokeBorder(Color.black, lineWidth: 1)
-                                )
-                                .padding()
-                            
-                            
-                        }
-                       // .alert(isPresented: $showInvalidFaceAlert, content: { self.invalidFaceAlert })
+//                        Button(action: {
+//                            authenticate()
+//                            if self.isUnlocked {
+//                                userData.userAuthenticated = true
+//                              //  self.showInvalidFaceAlert = false
+//                            } else {
+//                       //        self.showInvalidFaceAlert = true
+//                            }
+//
+//                        }) {
+//                            Text("Face ID")
+//                                .frame(width: 100, height: 36, alignment: .center)
+//                                .background(
+//                                    RoundedRectangle(cornerRadius: 16)
+//                                        .strokeBorder(Color.black, lineWidth: 1)
+//                                )
+//                                .padding()
+//
+//
+//                        }
+//                       // .alert(isPresented: $showInvalidFaceAlert, content: { self.invalidFaceAlert })
 
                         Spacer()
                         let validPassword = UserDefaults.standard.string(forKey: "Password")
@@ -150,30 +149,7 @@ struct LoginView : View {
     }
 
     
-    func authenticate(){
-        let context = LAContext()
-        var error: NSError?
-        
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error){
-            let reason = "We need to unlock your data"
-            
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){ success, authenticationError in
-                DispatchQueue.main.async{
-                    if success{
-                        self.isUnlocked = true
-                    }
-                    else{
-                        //problem
-                        print("problem")
-                    }
-                }
-            }
-        }
-        else{
-            //no biometric
-            print("no biometric")
-        }
-    }
+
 }
 
 struct LoginView_Previews: PreviewProvider {
