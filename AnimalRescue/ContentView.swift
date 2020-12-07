@@ -31,17 +31,18 @@ struct ContentView : View {
         
     }
     
-    func save(_ animal: AnimalStruct) {
+    func save(_ animal: [AnimalStruct]) {
         guard let widgetData = try? JSONEncoder().encode(animal) else { return }
         self.widgetData = widgetData
         print("save \(animal)")
     }
     
     func initSave() {
-        save(animalStructList[Int.random(in: 0..<userData.animalsList.count)])
+        save(animalStructList)
     }
     
-     func authenticate(){
+    
+    func authenticate(){
         let context = LAContext()
         var error: NSError?
         
@@ -54,9 +55,9 @@ struct ContentView : View {
                         self.isUnlocked = true
                     }
                     else{
-//                        let ac = UIAlertController(title: "Authentication failed", message: "you could not be verified; please try again.", preferredStyle: .alert)
-//                        ac.addAction(UIAlertAction(title: "OK", style: .default))
-//                        self?.present(ac,animated:true)
+                        //                        let ac = UIAlertController(title: "Authentication failed", message: "you could not be verified; please try again.", preferredStyle: .alert)
+                        //                        ac.addAction(UIAlertAction(title: "OK", style: .default))
+                        //                        self?.present(ac,animated:true)
                         print("not match")
                         
                     }

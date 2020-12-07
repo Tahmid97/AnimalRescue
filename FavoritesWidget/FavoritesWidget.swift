@@ -19,24 +19,26 @@ struct Provider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        guard let animal = try? JSONDecoder().decode(AnimalStruct.self, from: widgetData) else {
+        guard let animal = try? JSONDecoder().decode([AnimalStruct].self, from: widgetData) else {
             print("error decoding animal")
             return }
-        let entry = SimpleEntry(date: Date(), pictureUrl: animal.photoUrl, animalName: animal.name)
+        let randomNum = Int.random(in: 0..<animal.count)
+        let entry = SimpleEntry(date: Date(), pictureUrl: animal[randomNum].photoUrl, animalName: animal[randomNum].name)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
         
-        guard let animal = try? JSONDecoder().decode(AnimalStruct.self, from: widgetData) else {
+        guard let animal = try? JSONDecoder().decode([AnimalStruct].self, from: widgetData) else {
             print("error decoding animal")
             return }
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 3 {
-            let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, pictureUrl: animal.photoUrl, animalName: animal.name)
+            let randomNum = Int.random(in: 0..<animal.count)
+            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+            let entry = SimpleEntry(date: entryDate, pictureUrl: animal[randomNum].photoUrl, animalName: animal[randomNum].name)
             entries.append(entry)
         }
         
@@ -58,12 +60,12 @@ struct FavoritesWidgetEntryView : View {
         ZStack {
             Color
                 .gray
-                .opacity(0.9)
+                .opacity(1)
                 .edgesIgnoringSafeArea(.all)
             
             getImageFromUrl(url: entry.pictureUrl, defaultFilename: "ImageUnavailable")
                 .resizable()
-                .aspectRatio(contentMode: .fill)
+                .aspectRatio(contentMode: .fit)
             VStack{
                 Text(entry.animalName)
                     .padding(.top, 10)
