@@ -14,6 +14,7 @@
 		26D3C8C2257DCE4B00BD6951 /* FavoritesWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3C8C1257DCE4B00BD6951 /* FavoritesWidget.swift */; };
 		26D3C8C4257DCE4C00BD6951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D3C8C3257DCE4C00BD6951 /* Assets.xcassets */; };
 		26D3C8C8257DCE4C00BD6951 /* FavoritesWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 26D3C8BA257DCE4B00BD6951 /* FavoritesWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B71F5BF4257EF271003111E8 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F5BF3257EF271003111E8 /* WebView.swift */; };
 		B7405D9C2579499700F791DE /* RescueGroupsApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7405D9B2579499600F791DE /* RescueGroupsApiData.swift */; };
 		B7502A822578B8ED00ADF001 /* AnimalsData.json in Resources */ = {isa = PBXBuildFile; fileRef = B7502A812578B8ED00ADF001 /* AnimalsData.json */; };
 		B76E832F25784BF70042D13C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E832E25784BF70042D13C /* UserData.swift */; };
@@ -78,6 +79,7 @@
 		26D3C8C1257DCE4B00BD6951 /* FavoritesWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesWidget.swift; sourceTree = "<group>"; };
 		26D3C8C3257DCE4C00BD6951 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26D3C8C5257DCE4C00BD6951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B71F5BF3257EF271003111E8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		B7405D9B2579499600F791DE /* RescueGroupsApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RescueGroupsApiData.swift; sourceTree = "<group>"; };
 		B7502A812578B8ED00ADF001 /* AnimalsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AnimalsData.json; sourceTree = "<group>"; };
 		B76E832E25784BF70042D13C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				B7CD41122578584600A6FF7D /* SearchBar.swift */,
 				B7CD411F25785CD700A6FF7D /* UtilityFunctions.swift */,
 				B7CD41282578676900A6FF7D /* NavigationStyle.swift */,
+				B71F5BF3257EF271003111E8 /* WebView.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				B7FE9DAB257DF6CD00A1E93F /* SearchAnimals.swift in Sources */,
 				B7E8D5F42577413B00710667 /* CatFactsList.swift in Sources */,
 				B7E8D5EE257740D400710667 /* Home.swift in Sources */,
+				B71F5BF4257EF271003111E8 /* WebView.swift in Sources */,
 				26D3C8AF25789D3C00BD6951 /* CatFactsItem.swift in Sources */,
 				B7E8D5D425773C5F00710667 /* AnimalRescue.xcdatamodeld in Sources */,
 				B7CD4133257C654E00A6FF7D /* MainView.swift in Sources */,
