@@ -10,10 +10,14 @@ import LocalAuthentication
 struct ContentView : View {
     @State private var isUnlocked = false
     
+    @AppStorage("animal", store: UserDefaults(suiteName: "group.com.TahmidMuttaki.AnimalRescue.AnimalWidget"))
+    var widgetData: Data = Data()
+    
     // Subscribe to changes in UserData
     @EnvironmentObject var userData: UserData
     
     var body: some View {
+        initSave()
         if userData.userAuthenticated || isUnlocked {
             return AnyView(MainView())
                 .onAppear(perform: authenticate)
@@ -26,6 +30,17 @@ struct ContentView : View {
         }
         
     }
+    
+    func save(_ animal: AnimalStruct) {
+        guard let widgetData = try? JSONEncoder().encode(animal) else { return }
+        self.widgetData = widgetData
+        print("save \(animal)")
+    }
+    
+    func initSave() {
+        save(animalStructList[Int.random(in: 0..<userData.animalsList.count)])
+    }
+    
      func authenticate(){
         let context = LAContext()
         var error: NSError?
