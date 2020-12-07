@@ -1,3 +1,4 @@
+
 //
 //  Search.swift
 //  AnimalRescue
@@ -5,7 +6,6 @@
 //  Created by CS3714 on 12/6/20.
 //  Copyright © 2020 CS3714-91386 Team 16. All rights reserved.
 //
-
 import SwiftUI
 
 struct SearchAnimals: View {

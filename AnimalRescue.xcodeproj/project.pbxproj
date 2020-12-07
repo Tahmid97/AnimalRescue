@@ -39,6 +39,8 @@
 		B7E8D5F02577410000710667 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5EF2577410000710667 /* FavoritesList.swift */; };
 		B7E8D5F22577411E00710667 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F12577411E00710667 /* Grid.swift */; };
 		B7E8D5F42577413B00710667 /* CatFactsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F32577413B00710667 /* CatFactsList.swift */; };
+		B7FE9DAB257DF6CD00A1E93F /* SearchAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE9DAA257DF6CD00A1E93F /* SearchAnimals.swift */; };
+		B7FE9DAD257DF72000A1E93F /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE9DAC257DF72000A1E93F /* SearchResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		B7E8D5EF2577410000710667 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		B7E8D5F12577411E00710667 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		B7E8D5F32577413B00710667 /* CatFactsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsList.swift; sourceTree = "<group>"; };
+		B7FE9DAA257DF6CD00A1E93F /* SearchAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnimals.swift; sourceTree = "<group>"; };
+		B7FE9DAC257DF72000A1E93F /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				B7E8D5F12577411E00710667 /* Grid.swift */,
+				B7FE9DAA257DF6CD00A1E93F /* SearchAnimals.swift */,
+				B7FE9DAC257DF72000A1E93F /* SearchResults.swift */,
 			);
 			name = Grid;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 			files = (
 				B7E8D5CD25773C5F00710667 /* AppDelegate.swift in Sources */,
 				B7CD41292578676900A6FF7D /* NavigationStyle.swift in Sources */,
+				B7FE9DAD257DF72000A1E93F /* SearchResults.swift in Sources */,
 				B7CD411A257859CB00A6FF7D /* AnimalData.swift in Sources */,
 				26D3C8AA2578782700BD6951 /* AnimalsApiData.swift in Sources */,
 				B7E8D5CF25773C5F00710667 /* SceneDelegate.swift in Sources */,
@@ -412,6 +419,7 @@
 				B7E8D5F22577411E00710667 /* Grid.swift in Sources */,
 				B7CD411D25785A1A00A6FF7D /* AnimalStruct.swift in Sources */,
 				B76E832F25784BF70042D13C /* UserData.swift in Sources */,
+				B7FE9DAB257DF6CD00A1E93F /* SearchAnimals.swift in Sources */,
 				B7E8D5F42577413B00710667 /* CatFactsList.swift in Sources */,
 				B7E8D5EE257740D400710667 /* Home.swift in Sources */,
 				26D3C8AF25789D3C00BD6951 /* CatFactsItem.swift in Sources */,
