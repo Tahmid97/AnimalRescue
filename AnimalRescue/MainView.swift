@@ -20,10 +20,10 @@ struct MainView: View {
                     Image(systemName: "heart.fill")
                     Text("Favorites")
                 }
-            Grid()
+            SearchAnimals()
                 .tabItem {
-                    Image(systemName: "square.grid.3x3.fill")
-                    Text("Cute Animals")
+                    Image(systemName: "magnifyingglass.circle")
+                    Text("Search Animals")
                 }
             CatFactsList()
                 .tabItem {

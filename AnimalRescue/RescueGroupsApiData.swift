@@ -11,7 +11,7 @@ import Foundation
 fileprivate let appKey = "GLJHM8fB"
 
 
-public func getAnimalRescueDataFromApi() {
+public func getAnimalRescueDataFromApi(animal: String) {
     /*
      *********************************************
      *   Obtaining API Search Query URL Struct   *
@@ -19,7 +19,7 @@ public func getAnimalRescueDataFromApi() {
      */
     var apiQueryUrlStruct: URL?
     
-    if let urlStruct = URL(string: "https://test1-api.rescuegroups.org/v5/public/animals/search/available/cats/haspic/?sort=random&limit=5") {
+    if let urlStruct = URL(string: "https://test1-api.rescuegroups.org/v5/public/animals/search/available/\(animal)/") {
         apiQueryUrlStruct = urlStruct
     } else {
         return
@@ -33,6 +33,7 @@ public func getAnimalRescueDataFromApi() {
     
     let headers = [
         "Authorization": appKey,
+        "Content-Type": "application/vnd.api+json",
     ]
     
     let request = NSMutableURLRequest(url: apiQueryUrlStruct!,
