@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		267BB422257EED8A004F497C /* AnimalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD411C25785A1A00A6FF7D /* AnimalStruct.swift */; };
+		267BB425257EEE50004F497C /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CD411F25785CD700A6FF7D /* UtilityFunctions.swift */; };
 		26D3C8AA2578782700BD6951 /* AnimalsApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3C8A92578782700BD6951 /* AnimalsApiData.swift */; };
 		26D3C8AF25789D3C00BD6951 /* CatFactsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D3C8AE25789D3C00BD6951 /* CatFactsItem.swift */; };
 		26D3C8BD257DCE4B00BD6951 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D3C8BC257DCE4B00BD6951 /* WidgetKit.framework */; };
@@ -71,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		267BB41E257EED4A004F497C /* AnimalRescue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimalRescue.entitlements; sourceTree = "<group>"; };
+		267BB421257EED6F004F497C /* FavoritesWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FavoritesWidgetExtension.entitlements; sourceTree = "<group>"; };
 		26D3C8A92578782700BD6951 /* AnimalsApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsApiData.swift; sourceTree = "<group>"; };
 		26D3C8AE25789D3C00BD6951 /* CatFactsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsItem.swift; sourceTree = "<group>"; };
 		26D3C8BA257DCE4B00BD6951 /* FavoritesWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FavoritesWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +170,7 @@
 		B7E8D5C025773C5F00710667 = {
 			isa = PBXGroup;
 			children = (
+				267BB421257EED6F004F497C /* FavoritesWidgetExtension.entitlements */,
 				B7E8D5CB25773C5F00710667 /* AnimalRescue */,
 				26D3C8C0257DCE4B00BD6951 /* FavoritesWidget */,
 				26D3C8BB257DCE4B00BD6951 /* Frameworks */,
@@ -185,6 +190,7 @@
 		B7E8D5CB25773C5F00710667 /* AnimalRescue */ = {
 			isa = PBXGroup;
 			children = (
+				267BB41E257EED4A004F497C /* AnimalRescue.entitlements */,
 				B7E8D5E72577401300710667 /* Data Model */,
 				B7CD4131257C636F00A6FF7D /* Startup Views */,
 				B7E8D5E82577401E00710667 /* Delegates */,
@@ -410,6 +416,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267BB425257EEE50004F497C /* UtilityFunctions.swift in Sources */,
+				267BB422257EED8A004F497C /* AnimalStruct.swift in Sources */,
 				26D3C8C2257DCE4B00BD6951 /* FavoritesWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +484,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FavoritesWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C65B3LVL53;
 				INFOPLIST_FILE = FavoritesWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -497,7 +507,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FavoritesWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C65B3LVL53;
 				INFOPLIST_FILE = FavoritesWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -635,8 +647,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AnimalRescue/AnimalRescue.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AnimalRescue/Preview Content\"";
+				DEVELOPMENT_TEAM = C65B3LVL53;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AnimalRescue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -656,8 +670,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AnimalRescue/AnimalRescue.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AnimalRescue/Preview Content\"";
+				DEVELOPMENT_TEAM = C65B3LVL53;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AnimalRescue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
