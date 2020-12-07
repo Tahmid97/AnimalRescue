@@ -19,7 +19,7 @@ struct Home: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     
-                    Text("Animal Therapy")
+                    Text("Animal Rescue")
                         .font(.custom("Helvetica Neue", size: 30))
                         .padding(.top, 100)
                     
