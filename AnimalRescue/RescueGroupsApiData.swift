@@ -171,7 +171,6 @@ public func getAnimalRescueDataFromApi(animal: String) {
                     let birthDate = attributes["birthDate"] as? String ?? "Not Listed"
                     let breedString = attributes["breedString"] as? String ?? "Not Listed"
                     let colorDetails = attributes["colorDetails"] as? String ?? "Not Listed"
-                    let descriptionText = attributes["descriptionText"] as? String ?? "Not Listed"
                     let indoorOutdoor = attributes["indoorOutdoor"] as? String ?? "Not Listed"
                     let name = attributes["name"] as? String ?? "Not Listed"
                     let sex = attributes["sex"] as? String ?? "Not Listed"
@@ -185,11 +184,15 @@ public func getAnimalRescueDataFromApi(animal: String) {
                     else {
                         photoUrl = ""
                     }
-                                        
-                    let animalFound = AnimalStruct(id: UUID().uuidString, adoptionFeeString: adoptionFeeString, ageGroup: ageGroup, ageString: ageString, availableDate: availableDate, birthDate: birthDate, breedString: breedString, colorDetails: colorDetails, descriptionText: descriptionText, indoorOutdoor: indoorOutdoor, name: name, species: String(animal.dropLast()), sex: sex, url: url, photoUrl: photoUrl)
+                    
+                    
+                    let animalFound = AnimalStruct(id: UUID().uuidString, adoptionFeeString: adoptionFeeString, ageGroup: ageGroup, ageString: ageString, availableDate: availableDate, birthDate: birthDate, breedString: breedString, colorDetails: colorDetails, indoorOutdoor: indoorOutdoor, name: name, species: String(animal.dropLast()), sex: sex, url: url, photoUrl: photoUrl)
                     
                     rescueGroupsAnimalsList.append(animalFound)
-                    //print(animalFound)
+                    
+                    
+                    print(animalFound)
+                    
                 }   // End of 'for loop'
             } else {
                 // Return an empty response indicating that API access was unsuccessful
@@ -197,49 +200,6 @@ public func getAnimalRescueDataFromApi(animal: String) {
             }
             
             
-            /*
-             activityLevel = "Moderately Active";
-             adoptedDate = "2011-01-21T00:00:00Z";
-             # adoptionFeeString = "25.00";
-             # ageGroup = Adult;
-             # ageString = "15 Years 8 Months";
-             # availableDate = "2011-03-10T00:00:00Z";
-             # birthDate = "2004-11-07T00:00:00Z";
-             breedPrimary = "Domestic Short Hair";
-             breedPrimaryId = 35;
-             # breedString = "Domestic Short Hair";
-             # colorDetails = "brown tabby";
-             createdDate = "2005-11-07T22:28:13Z";
-             descriptionHtml = "Katie&nbsp;is a real character. She's super playful and full of funny antics. She still acts like a kitten.&nbsp; She's a quiet, low maintenance cat.&nbsp; She prances into and out of her carrier without assistance, is a good traveler, and is eager to meet each new royal adventure. She prefers to be the ruler of her own&nbsp;castle, but will tolerate other cats.&nbsp; To meet her or for more information, please call (561) 784-4792.<img src=\"https://tracker.rescuegroups.org/pet?13197\" width=\"0\" height=\"0\" alt=\"\" />";
-             # descriptionText = "Katie&nbsp;is a real character. She's super playful and full of funny antics. She still acts like a kitten.&nbsp; She's a quiet, low maintenance cat.&nbsp; She prances into and out of her carrier without assistance, is a good traveler, and is eager to meet each new royal adventure. She prefers to be the ruler of her own&nbsp;castle, but will tolerate other cats.&nbsp; To meet her or for more information, please call (561) 784-4792.";
-             # indoorOutdoor = "Indoor Only";
-             isAdoptionPending = 0;
-             isBirthDateExact = 0;
-             isCourtesyListing = 0;
-             isCurrentVaccinations = 1;
-             isDeclawed = 0;
-             isDogsOk = 1;
-             isFound = 0;
-             isHousetrained = 1;
-             isNeedingFoster = 0;
-             isSpecialNeeds = 0;
-             isSponsorable = 1;
-             # name = Katie;
-             newPeopleReaction = Friendly;
-             ownerExperience = Breed;
-             pictureCount = 10;
-             pictureThumbnailUrl = "https://s3.amazonaws.com/filestore.rescuegroups.org/112/pictures/animals/13/13197/14275605_100x87.jpg";
-             priority = 10;
-             # sex = Female;
-             sizeCurrent = 9;
-             sizeGroup = Small;
-             sizeUOM = Pounds;
-             slug = "adopt-katie-domestic-short-hair-cat";
-             updatedDate = "2019-10-24T21:13:17Z";
-             # url = "https://www.animalrescueforce.org/animals/detail?AnimalID=13197";
-             videoCount = 0;
-             videoUrlCount = 0;
-             */
             
             
         } catch {

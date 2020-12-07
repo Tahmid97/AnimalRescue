@@ -11,7 +11,7 @@ import SwiftUI
 struct FavoriteItem: View {
     
     // Input Parameter
-    let animal: Animal
+    let animal: AnimalStruct
     
     var body: some View {
         HStack {
@@ -22,17 +22,12 @@ struct FavoriteItem: View {
                 .frame(width: 80.0)
             
             VStack(alignment: .leading) {
-                Text(animal.animalType)
-                //Text(animal.species)
-                //Text(animal.ageString)
+                Text("Name: \(animal.name)")
+                Text("Species: \(animal.species)")
+                Text("Age: \(animal.ageString)")
             }   // End of HStack
         }
-    }
-}
-
-struct FavoriteItem_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoriteItem(animal: animalStructList[0])
+        
     }
 }
 

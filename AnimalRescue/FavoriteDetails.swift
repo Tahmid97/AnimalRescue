@@ -13,7 +13,7 @@ import MapKit
 struct FavoriteDetails: View {
    
     // Input Parameter
-    let animal: Animal
+    let animal: AnimalStruct
    
     var body: some View {
         // A Form cannot have more than 10 Sections.
@@ -21,7 +21,7 @@ struct FavoriteDetails: View {
         Form {
             Group {
                 Section(header: Text("Animal Name")) {
-                    Text(animal.animalType)
+                    Text(animal.name)
                 }
 //                Section(header: Text("Movie Poster")) {
 //                    // Public function getImageFromUrl is given in UtilityFunctions.swift
@@ -48,13 +48,13 @@ struct FavoriteDetails: View {
 //                    }
 //                }
                 Section(header: Text("animal Age")) {
-                    Text("\(animal.animalType)")
+                    Text("\(animal.ageString)")
                 }
             }
 
  
         }   // End of Form
-        .navigationBarTitle(Text("\(animal.animalType)"), displayMode: .inline)
+        .navigationBarTitle(Text("\(animal.species)"), displayMode: .inline)
             .font(.system(size: 14))
        
     }   // End of body

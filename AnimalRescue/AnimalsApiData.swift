@@ -127,7 +127,7 @@ public func getCatFromApi() -> Animal {
         print("error retrieving cat")
     }
     
-    return Animal(id: UUID(), animalType: "Cat", photoUrl: photoUrl)
+    return Animal(id: UUID().uuidString, animalType: "Cat", photoUrl: photoUrl)
 }
 
 /*
@@ -183,7 +183,7 @@ public func getDogFromApi() -> Animal {
         print("error retrieving dog")
     }
     
-    return Animal(id: UUID(), animalType: "Dog", photoUrl: photoUrl)
+    return Animal(id: UUID().uuidString, animalType: "Dog", photoUrl: photoUrl)
 }
 
 /*
@@ -239,7 +239,7 @@ public func getFoxFromApi() -> Animal {
         print("error retrieving fox")
     }
     
-    return Animal(id: UUID(), animalType: "Fox", photoUrl: photoUrl)
+    return Animal(id: UUID().uuidString, animalType: "Fox", photoUrl: photoUrl)
 }
 
 public func getCatFactsFromApi() {

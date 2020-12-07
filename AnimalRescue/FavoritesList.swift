@@ -39,13 +39,13 @@ struct FavoritesList: View {
             .customNavigationViewStyle()  // Given in NavigationStyle.swift
     }
    
-    func searchItemAnimal(searchListItem: String) -> Animal {
+    func searchItemAnimal(searchListItem: String) -> AnimalStruct {
         /*
          searchListItem = "id|name|alpha2code|capital|languages|currency"
          country id = searchListItem.components(separatedBy: "|")[0]
          */
         // Find the index number of countriesList matching the country attribute 'id'
-        let index = userData.animalsList.firstIndex(where: {$0.id.uuidString == searchListItem.components(separatedBy: "|")[0]})!
+        let index = userData.animalsList.firstIndex(where: {$0.id == searchListItem.components(separatedBy: "|")[0]})!
 
         return userData.animalsList[index]
     }

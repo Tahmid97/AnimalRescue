@@ -20,7 +20,7 @@ struct SearchAnimals: View {
     
     
     @State private var selectedIndex = 2
-    @State private var previousIndex = 1
+    @State private var previousIndex = -1
 
     @State private var searchCompleted = false
 

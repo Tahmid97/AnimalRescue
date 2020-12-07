@@ -10,14 +10,7 @@ import Foundation
 import SwiftUI
 
 // Global array of Country structs
-var animalStructList = [Animal]()
-
-/*
- Each orderedSearchableCountriesList element contains
- selected country attributes separated by vertical lines
- for inclusion in the search by the Search Bar in FavoritesList:
- "id|name|alpha2code|capital|languages|currency"
- */
+var animalStructList = [AnimalStruct]()
 var orderedSearchableAnimalsList = [String]()
 
 
@@ -83,27 +76,10 @@ public func readAnimalsDataFiles() {
         // The function is given in UtilityFunctions.swift
         animalStructList = decodeJsonFileIntoArrayOfStructs(fullFilename: animalsDataFullFilename, fileLocation: "Main Bundle")
         print("AnimalsData is loaded from main bundle")
-        
-        /*
-         public var id: UUID        // Storage Type: String, Use Type (format): UUID
-         var adoptionFeeString: String
-         var ageGroup: String
-         var ageString: String
-         var availableDate: String
-         var birthDate: String
-         var breedString: String
-         var colorDetails: String
-         var descriptionText: String
-         var indoorOutdoor: String
-         var name: String
-         var species: String
-         var sex: String
-         var url: String
-         var photoUrl: String
-         */
+
         for animal in animalStructList {
-            let selectedAnimalAttributesForSearch = "\(animal.id)|\(animal.animalType)"
-            //let selectedAnimalAttributesForSearch = "\(animal.ageGroup)|\(animal.name)|\(animal.breedString)|\(animal.colorDetails)|\(animal.indoorOutdoor)|\(animal.sex)|\(animal.species)|\(animal.ageString)"
+            //let selectedAnimalAttributesForSearch = "\(animal.id)|\(animal.animalType)"
+            let selectedAnimalAttributesForSearch = "\(animal.id)|\(animal.ageGroup)|\(animal.name)|\(animal.breedString)|\(animal.colorDetails)|\(animal.indoorOutdoor)|\(animal.sex)|\(animal.species)|\(animal.ageString)"
             orderedSearchableAnimalsList.append(selectedAnimalAttributesForSearch)
         }
         
