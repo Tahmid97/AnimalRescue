@@ -1,17 +1,16 @@
 //
-//  FavoritesItem.swift
+//  AnimalItem.swift
 //  AnimalRescue
 //
-//  Created by Boshen Zhang on 12/2/20.
+//  Created by CS3714 on 12/7/20.
 //  Copyright © 2020 CS3714-91386 Team 16. All rights reserved.
 //
 
 import SwiftUI
 
-struct FavoriteItem: View {
-    
+struct AnimalItem: View {
     // Input Parameter
-    let animal: Animal
+    let animal: AnimalStruct
     
     var body: some View {
         HStack {
@@ -22,17 +21,10 @@ struct FavoriteItem: View {
                 .frame(width: 80.0)
             
             VStack(alignment: .leading) {
-                Text(animal.animalType)
-                //Text(animal.species)
-                //Text(animal.ageString)
+                Text("Name: \(animal.name)")
+                Text("Species: \(animal.species)")
+                Text("Age: \(animal.ageString)")
             }   // End of HStack
         }
     }
 }
-
-struct FavoriteItem_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoriteItem(animal: animalStructList[0])
-    }
-}
-

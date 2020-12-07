@@ -13,3 +13,21 @@ public struct Animal: Hashable, Codable, Identifiable {
     var animalType: String
     var photoUrl: String
 }
+
+public struct AnimalStruct: Hashable, Codable, Identifiable {
+    public var id: String        // Storage Type: String, Use Type (format): UUID
+    var adoptionFeeString: String
+    var ageGroup: String
+    var ageString: String
+    var availableDate: String
+    var birthDate: String
+    var breedString: String
+    var colorDetails: String
+    var descriptionText: String
+    var indoorOutdoor: String
+    var name: String
+    var species: String
+    var sex: String
+    var url: String
+    var photoUrl: String
+}

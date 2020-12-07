@@ -9,13 +9,16 @@
 import SwiftUI
 
 struct SearchResults: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        var body: some View {
+        List {
+            ForEach(rescueGroupsAnimalsList) { aAnimal in
+                NavigationLink(destination: SearchResultDetails(animal: aAnimal)) {
+                    AnimalItem(animal: aAnimal)
+                }
+            }
+            
+        }   // End of List
+        .navigationBarTitle(Text("Animals Found"), displayMode: .inline)
     }
 }
 
-struct SearchResults_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchResults()
-    }
-}

@@ -11,8 +11,7 @@ import SwiftUI
 struct SearchAnimals: View {
     //@State private var searchFieldValue = ""
     @State private var showMissingInputDataAlert = false
-    @State private var searchCompleted = false
-    
+
     let searchSpecies = ["alpacas", "birds", "cats", "chickens", "chinchillas", "cows", "degus", "dogs", "donkeys",
                          "ducks", "ferrets", "fish", "frogs", "geckos", "geese", "gerbils", "goats", "groundhogs",
                          "guineapigs", "hamsters", "hedgehogs", "hermitcrabs", "horses", "iguanas", "lizards", "llama",
@@ -22,6 +21,9 @@ struct SearchAnimals: View {
     
     @State private var selectedIndex = 2
     @State private var previousIndex = 1
+
+    @State private var searchCompleted = false
+
     
     var body: some View {
         NavigationView {
@@ -62,7 +64,7 @@ struct SearchAnimals: View {
                         }   // End of HStack
                     }
                     
-                    if searchCompleted {
+                    if self.selectedIndex == self.previousIndex {
                         Section(header: Text("Show Animals Found")) {
                             NavigationLink(destination: showSearchResults) {
                                 HStack {
@@ -111,10 +113,9 @@ struct SearchAnimals: View {
     var showSearchResults: some View {
         
         // Global variable countryFound is given in CountryApiData.swift
-        //if countryFound.name.isEmpty {
-        //    return AnyView(notFoundMessage)
-        //}
-        
+        if rescueGroupsAnimalsList.isEmpty {
+            return AnyView(notFoundMessage)
+        }
         return AnyView(SearchResults())
     }
     
@@ -130,7 +131,7 @@ struct SearchAnimals: View {
                 .font(Font.title.weight(.medium))
                 .foregroundColor(.red)
                 .padding()
-            Text("No Country Found!\n\nThe entered query x under category \(searchSpecies[selectedIndex]) did not return a country from the API! Please enter another search query.")
+            Text("No Animal Found!\n\n No \(self.searchSpecies[self.selectedIndex]) found from the API! Please enter another search query.")
                 .fixedSize(horizontal: false, vertical: true)   // Allow lines to wrap around
                 .multilineTextAlignment(.center)
                 .padding()

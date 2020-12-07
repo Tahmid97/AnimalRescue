@@ -39,6 +39,8 @@
 		B7E8D5F02577410000710667 /* FavoritesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5EF2577410000710667 /* FavoritesList.swift */; };
 		B7E8D5F22577411E00710667 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F12577411E00710667 /* Grid.swift */; };
 		B7E8D5F42577413B00710667 /* CatFactsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E8D5F32577413B00710667 /* CatFactsList.swift */; };
+		B7F169C1257E8C6E009FD718 /* AnimalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F169C0257E8C6E009FD718 /* AnimalItem.swift */; };
+		B7F169C3257E8DC7009FD718 /* SearchResultDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F169C2257E8DC7009FD718 /* SearchResultDetails.swift */; };
 		B7FE9DAB257DF6CD00A1E93F /* SearchAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE9DAA257DF6CD00A1E93F /* SearchAnimals.swift */; };
 		B7FE9DAD257DF72000A1E93F /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FE9DAC257DF72000A1E93F /* SearchResults.swift */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,8 @@
 		B7E8D5EF2577410000710667 /* FavoritesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesList.swift; sourceTree = "<group>"; };
 		B7E8D5F12577411E00710667 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		B7E8D5F32577413B00710667 /* CatFactsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactsList.swift; sourceTree = "<group>"; };
+		B7F169C0257E8C6E009FD718 /* AnimalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalItem.swift; sourceTree = "<group>"; };
+		B7F169C2257E8DC7009FD718 /* SearchResultDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDetails.swift; sourceTree = "<group>"; };
 		B7FE9DAA257DF6CD00A1E93F /* SearchAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnimals.swift; sourceTree = "<group>"; };
 		B7FE9DAC257DF72000A1E93F /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -275,7 +279,9 @@
 			children = (
 				B7E8D5F12577411E00710667 /* Grid.swift */,
 				B7FE9DAA257DF6CD00A1E93F /* SearchAnimals.swift */,
+				B7F169C0257E8C6E009FD718 /* AnimalItem.swift */,
 				B7FE9DAC257DF72000A1E93F /* SearchResults.swift */,
+				B7F169C2257E8DC7009FD718 /* SearchResultDetails.swift */,
 			);
 			name = Grid;
 			sourceTree = "<group>";
@@ -427,11 +433,13 @@
 				B7CD4133257C654E00A6FF7D /* MainView.swift in Sources */,
 				B7CD41132578584600A6FF7D /* SearchBar.swift in Sources */,
 				B7CD4136257C656000A6FF7D /* LoginView.swift in Sources */,
+				B7F169C1257E8C6E009FD718 /* AnimalItem.swift in Sources */,
 				B7CD4139257C65E000A6FF7D /* ResetPassword.swift in Sources */,
 				B7405D9C2579499700F791DE /* RescueGroupsApiData.swift in Sources */,
 				B7CD412025785CD700A6FF7D /* UtilityFunctions.swift in Sources */,
 				B7E8D5D125773C5F00710667 /* ContentView.swift in Sources */,
 				B7CD413C257C685700A6FF7D /* Setting.swift in Sources */,
+				B7F169C3257E8DC7009FD718 /* SearchResultDetails.swift in Sources */,
 				B7CD41232578671F00A6FF7D /* FavoriteItem.swift in Sources */,
 				B7E8D5F02577410000710667 /* FavoritesList.swift in Sources */,
 			);

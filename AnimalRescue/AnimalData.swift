@@ -85,22 +85,25 @@ public func readAnimalsDataFiles() {
         print("AnimalsData is loaded from main bundle")
         
         /*
-         -------------------------------------------------------------
-         |   Create global variable orderedSearchableCountriesList   |
-         -------------------------------------------------------------
-         This list has two purposes:
-         
-         (1) preserve the order of countries according to user's liking, and
-         (2) enable search of selected country attributes by the SearchBar in FavoritesList.
-         
-         Each list element consists of "id|name|alpha2code|capital|languages|currency".
-         We chose these attributes separated by vertical lines to be included in the search.
-         We separate them with "|" so that we can extract its components separately.
-         For example, to obtain the id: list item.components(separatedBy: "|")[0]
+         public var id: UUID        // Storage Type: String, Use Type (format): UUID
+         var adoptionFeeString: String
+         var ageGroup: String
+         var ageString: String
+         var availableDate: String
+         var birthDate: String
+         var breedString: String
+         var colorDetails: String
+         var descriptionText: String
+         var indoorOutdoor: String
+         var name: String
+         var species: String
+         var sex: String
+         var url: String
+         var photoUrl: String
          */
         for animal in animalStructList {
             let selectedAnimalAttributesForSearch = "\(animal.id)|\(animal.animalType)"
-            
+            //let selectedAnimalAttributesForSearch = "\(animal.ageGroup)|\(animal.name)|\(animal.breedString)|\(animal.colorDetails)|\(animal.indoorOutdoor)|\(animal.sex)|\(animal.species)|\(animal.ageString)"
             orderedSearchableAnimalsList.append(selectedAnimalAttributesForSearch)
         }
         
