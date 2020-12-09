@@ -25,8 +25,6 @@ struct ContentView : View {
         } else {
             return AnyView(LoginView())
                 .onAppear(perform: authenticate)
-            
-            //                    .onAppear(perform: authenticate)
         }
         
     }
@@ -41,7 +39,7 @@ struct ContentView : View {
         save(animalStructList)
     }
     
-    
+    //this Function implement the face id authentification. change state variable isUnblocked is successfully matched the face
     func authenticate(){
         let context = LAContext()
         var error: NSError?
@@ -55,9 +53,7 @@ struct ContentView : View {
                         self.isUnlocked = true
                     }
                     else{
-                        //                        let ac = UIAlertController(title: "Authentication failed", message: "you could not be verified; please try again.", preferredStyle: .alert)
-                        //                        ac.addAction(UIAlertAction(title: "OK", style: .default))
-                        //                        self?.present(ac,animated:true)
+                        //problem
                         print("not match")
                         
                     }
