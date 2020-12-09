@@ -25,6 +25,11 @@ struct MainView: View {
                     Image(systemName: "magnifyingglass.circle")
                     Text("Search Animals")
                 }
+            Grid()
+                .tabItem {
+                    Image(systemName: "square.grid.3x2.fill")
+                    Text("Grid")
+                }
             CatFactsList()
                 .tabItem {
                     Image(systemName: "map.fill")

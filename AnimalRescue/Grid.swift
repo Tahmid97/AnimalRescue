@@ -7,14 +7,21 @@
 //
 
 import SwiftUI
-
-fileprivate var selectedAnimal = catsGridList[0]
+import CoreData
+fileprivate var selectedAnimalName = ""
+fileprivate var selectedAnimalSex = ""
 
 struct Grid: View {
-    
-    // Subscribe to changes in UserData
+    // ❎ CoreData managedObjectContext reference
+    @Environment(\.managedObjectContext) var managedObjectContext
+   
+    // ❎ CoreData FetchRequest returning all Song entities in the database
+    @FetchRequest(fetchRequest: Pet.allPetsFetchRequest()) var allPets: FetchedResults<Pet>
+   
+    // ❎ Refresh this view upon notification that the managedObjectContext completed a save.
+    // Upon refresh, @FetchRequest is re-executed fetching all Song entities with all the changes.
     @EnvironmentObject var userData: UserData
-    
+   
     @State private var showAnimalInfoAlert = false
     
     // Fit as many images per row as possible with minimum image width of 100 points each.
@@ -26,14 +33,16 @@ struct Grid: View {
             // spacing defines spacing between rows
             LazyVGrid(columns: columns, spacing: 3) {
                 // 🔴 Specifying id: \.self is critically important to prevent photos being listed as out of order
-                ForEach(randomAnimalsList, id: \.self) { animal in
+                ForEach(allPets, id: \.self) { animal in
                     // Public function getImageFromUrl is given in UtilityFunctions.swift
-                    getImageFromUrl(url: animal.photoUrl, defaultFilename: "ImageUnavailable")
+                    getImageFromUrl(url: animal.photo?.photoUrl ?? "", defaultFilename: "ImageUnavailable")
                         .resizable()
                         .scaledToFit()
                         .frame(minWidth: 120, maxWidth: 120, minHeight: 120, maxHeight: 120, alignment: .center)
                         .onTapGesture {
-                            selectedAnimal = animal
+                            selectedAnimalName = animal.name ?? ""
+                            selectedAnimalSex = animal.sex ?? ""
+
                             self.showAnimalInfoAlert = true
                         }
                 }
@@ -44,11 +53,11 @@ struct Grid: View {
         .alert(isPresented: $showAnimalInfoAlert, content: { self.animalInfoAlert })
     }
     
-    var animalInfoAlert: Alert {
-        Alert(title: Text("Type of animal: \(selectedAnimal.animalType)"),
+     var animalInfoAlert: Alert {
+        Alert(title: Text("Name: \(selectedAnimalName)\n Sex:\(selectedAnimalSex)"),
               dismissButton: .default(Text("OK")))
     }
-    
+
 }
 
 struct Grid_Previews: PreviewProvider {

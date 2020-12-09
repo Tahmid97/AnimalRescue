@@ -8,10 +8,29 @@
 
 import SwiftUI
 import MapKit
- 
+import CoreData
 struct SearchResultDetails: View {
     @EnvironmentObject var userData: UserData
+    // ❎ CoreData managedObjectContext reference
+    @Environment(\.managedObjectContext) var managedObjectContext
+
     @State private var showAnimalAddedAlert = false
+
+//    // Song Entity
+//    @State private var adoptionFee = ""
+//    @State private var ageGroup = ""
+//    @State private var ageString = ""
+//    @State private var AvailableDate = ""
+//    @State private var birthDate = ""
+//    @State private var breedString = ""
+//    @State private var colorDetails = ""
+//    @State private var indoorOutdoor = ""
+//    @State private var name = ""
+//    @State private var species = ""
+//    @State private var sex = ""
+//    @State private var url = ""
+//    @State private var photoUrl = ""
+//
 
     // Input Parameter
     let animal: AnimalStruct
@@ -93,6 +112,7 @@ struct SearchResultDetails: View {
                         // Append the country found to userData.countriesList
                         self.userData.animalsList.append(animal)
  
+                        saveToDatabase() 
                         // Set the global variable point to the changed list
                         animalStructList = self.userData.animalsList
                        
@@ -104,6 +124,7 @@ struct SearchResultDetails: View {
                         orderedSearchableAnimalsList = self.userData.searchableOrderedAnimalsList
                         self.showAnimalAddedAlert = true
 
+                        
                     }) {
                         HStack {
                             Image(systemName: "plus")
@@ -133,5 +154,67 @@ struct SearchResultDetails: View {
               dismissButton: .default(Text("OK")) )
     }
 
+    func saveToDatabase() {
+       
+       
+        /*
+         =====================================================
+         Create an instance of the Song Entity and dress it up
+         =====================================================
+        */
+       
+        // ❎ Create a new Song entity in CoreData managedObjectContext
+        let newPet = Pet(context: self.managedObjectContext)
+       
+        // ❎ Dress up the new Song entity
+        newPet.name = animal.name
+        newPet.adoptionFeeString = animal.adoptionFeeString
+        newPet.ageGroup = animal.ageGroup
+        newPet.ageString = animal.ageString
+        newPet.availableDate = animal.availableDate
+        newPet.birthDate = animal.birthDate
+        newPet.breedString = animal.breedString
+        newPet.colorDetails = animal.colorDetails
+        newPet.indoorOutdoor = animal.indoorOutdoor
+        newPet.species = animal.species
+        newPet.sex = animal.sex
+        newPet.url = animal.url
+        newPet.photo?.photoUrl = animal.photoUrl
 
+
+
+
+        /*
+         ======================================================
+         Create an instance of the Photo Entity and dress it up
+         ======================================================
+        */
+       
+        // ❎ Create a new Photo entity in CoreData managedObjectContext
+        let aPhoto = Photo(context: self.managedObjectContext)
+       
+        // Dress it up by specifying its attribute
+        aPhoto.photoUrl = animal.photoUrl
+       
+        // Establish One-to-One Relationship between Recipe and Photo
+        newPet.photo = aPhoto      // A recipe can have only one photo
+        aPhoto.pet = newPet     // A photo can belong to only one recipe
+        /*
+         ==============================
+         Establish Entity Relationships
+         ==============================
+        */
+               /*
+         =============================================
+         MARK: - ❎ Save Changes to Core Data Database
+         =============================================
+         */
+       
+        do {
+            try self.managedObjectContext.save()
+        } catch {
+            return
+        }
+       
+    }   // End of function
 }
