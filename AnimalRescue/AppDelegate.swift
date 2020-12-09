@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         populateLists()
         readAnimalsDataFiles()
+        createAnimalStructDatabase()
         return true
     }
     

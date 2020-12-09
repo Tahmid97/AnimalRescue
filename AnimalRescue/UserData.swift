@@ -51,7 +51,8 @@ final class UserData: ObservableObject {
     
     // Publish if the user is authenticated or not
     @Published var userAuthenticated = false
-   
+    @Published var savedInDatabase =  NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
+
     /*
      --------------------------
      MARK: - Scheduling a Timer

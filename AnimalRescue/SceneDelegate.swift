@@ -17,6 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
+            let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+           
             /*
              **************************************************************************************
              Inject an instance of UserData() class into the environment and make it available to
@@ -24,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              **************************************************************************************
              */
             window.rootViewController = UIHostingController(rootView: ContentView()
+                                                                .environment(\.managedObjectContext, managedObjectContext)
                                                                 .environmentObject(UserData()))
             
             self.window = window
