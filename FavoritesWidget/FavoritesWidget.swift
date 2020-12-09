@@ -11,34 +11,40 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     
+    // Load animal data from favorites list
     @AppStorage("animal", store: UserDefaults(suiteName: "group.com.TahmidMuttaki.AnimalRescue.AnimalWidget"))
     var widgetData: Data = Data()
     
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), pictureUrl: "...", animalName: "...")
+    func placeholder(in context: Context) -> AnimalEntry {
+        AnimalEntry(date: Date(), pictureUrl: "...", animalName: "...")
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        guard let animal = try? JSONDecoder().decode([AnimalStruct].self, from: widgetData) else {
+    func getSnapshot(in context: Context, completion: @escaping (AnimalEntry) -> ()) {
+        guard let animal = try? JSONDecoder().decode([AnimalStruct].self, from: widgetData)
+        else {
             print("error decoding animal")
-            return }
-        let randomNum = Int.random(in: 0..<animal.count)
-        let entry = SimpleEntry(date: Date(), pictureUrl: animal[randomNum].photoUrl, animalName: animal[randomNum].name)
+            return
+        }
+        let randomNum = Int.random(in: 0 ..< animal.count)
+        let entry = AnimalEntry(date: Date(), pictureUrl: animal[randomNum].photoUrl, animalName: animal[randomNum].name)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [AnimalEntry] = []
         
-        guard let animal = try? JSONDecoder().decode([AnimalStruct].self, from: widgetData) else {
+        guard let animal = try? JSONDecoder().decode([AnimalStruct].self, from: widgetData)
+        else {
             print("error decoding animal")
-            return }
+            return
+        }
+        
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 3 {
-            let randomNum = Int.random(in: 0..<animal.count)
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, pictureUrl: animal[randomNum].photoUrl, animalName: animal[randomNum].name)
+        for minuteOffset in 0 ..< 3 {
+            let randomNum = Int.random(in: 0 ..< animal.count)
+            let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset, to: currentDate)!
+            let entry = AnimalEntry(date: entryDate, pictureUrl: animal[randomNum].photoUrl, animalName: animal[randomNum].name)
             entries.append(entry)
         }
         
@@ -47,7 +53,7 @@ struct Provider: TimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct AnimalEntry: TimelineEntry {
     let date: Date
     let pictureUrl: String
     let animalName: String
@@ -59,8 +65,7 @@ struct FavoritesWidgetEntryView : View {
     var body: some View {
         ZStack {
             Color
-                .gray
-                .opacity(1)
+                .white
                 .edgesIgnoringSafeArea(.all)
             
             getImageFromUrl(url: entry.pictureUrl, defaultFilename: "ImageUnavailable")
@@ -91,7 +96,7 @@ struct FavoritesWidget: Widget {
 
 struct FavoritesWidget_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritesWidgetEntryView(entry: SimpleEntry(date: Date(), pictureUrl: "...", animalName: "..."))
+        FavoritesWidgetEntryView(entry: AnimalEntry(date: Date(), pictureUrl: "...", animalName: "..."))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

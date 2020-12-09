@@ -10,14 +10,20 @@ import LocalAuthentication
 struct ContentView : View {
     @State private var isUnlocked = false
     
+    
+    // Store favorite animals using key "animal" in order to pass to Widget
     @AppStorage("animal", store: UserDefaults(suiteName: "group.com.TahmidMuttaki.AnimalRescue.AnimalWidget"))
     var widgetData: Data = Data()
+    
     
     // Subscribe to changes in UserData
     @EnvironmentObject var userData: UserData
     
     var body: some View {
+        
+        // Update widget data every time the app is loaded
         initSave()
+        
         if userData.userAuthenticated || isUnlocked {
             return AnyView(MainView())
                 .onAppear(perform: authenticate)
@@ -30,8 +36,10 @@ struct ContentView : View {
     }
     
     func save(_ animal: [AnimalStruct]) {
+        // Saves the passed animal struct to be passed to widget
         guard let widgetData = try? JSONEncoder().encode(animal) else { return }
         self.widgetData = widgetData
+        
         print("save \(animal)")
     }
     
@@ -53,7 +61,6 @@ struct ContentView : View {
                         self.isUnlocked = true
                     }
                     else{
-                        //problem
                         print("not match")
                         
                     }
@@ -61,8 +68,8 @@ struct ContentView : View {
             }
         }
         else{
-            //no biometric
-            print("no biometric")
+            //no biometrics
+            print("no biometrics")
         }
     }
 }
