@@ -54,7 +54,7 @@ struct Grid: View {
     }
     
      var animalInfoAlert: Alert {
-        Alert(title: Text("Name: \(selectedAnimalName)\n Sex:\(selectedAnimalSex)"),
+        Alert(title: Text("Name: \(selectedAnimalName)\n Sex: \(selectedAnimalSex)"),
               dismissButton: .default(Text("OK")))
     }
 
