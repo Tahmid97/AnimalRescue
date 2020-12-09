@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17510.1" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Pet" representedClassName=".Animal" syncable="YES">
+    <entity name="Pet" representedClassName=".Pet" syncable="YES">
         <attribute name="adoptionFeeString" optional="YES" attributeType="String"/>
         <attribute name="ageGroup" optional="YES" attributeType="String"/>
         <attribute name="ageString" optional="YES" attributeType="String"/>
@@ -8,7 +8,7 @@
         <attribute name="birthDate" optional="YES" attributeType="String"/>
         <attribute name="breedString" optional="YES" attributeType="String"/>
         <attribute name="colorDetails" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="indoorOutdoor" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="sex" optional="YES" attributeType="String"/>

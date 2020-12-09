@@ -44,7 +44,7 @@ extension Pet {
         The 'static' keyword designates the func as a class method invoked by using the
         class name as Song.allSongsFetchRequest() in any .swift file in your project.
      */
-    static func allSongsFetchRequest() -> NSFetchRequest<Pet> {
+    static func allPetsFetchRequest() -> NSFetchRequest<Pet> {
        
         let request: NSFetchRequest<Pet> = Pet.fetchRequest() as! NSFetchRequest<Pet>
         /*
