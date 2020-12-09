@@ -13,7 +13,6 @@ struct CatFactsList: View {
     var body: some View {
         NavigationView {
             List {
-                // placeStructList is a global array of Place structs given in TravelGuideData.swift
                 ForEach(catFacts, id: \.self) { catFact in
                     CatFactsItem(catFact: catFact)
                 }

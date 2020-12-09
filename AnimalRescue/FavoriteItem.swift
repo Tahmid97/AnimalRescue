@@ -26,6 +26,7 @@ struct FavoriteItem: View {
                 Text("Species: \(animal.species)")
                 Text("Age: \(animal.ageString)")
             }   // End of HStack
+            .font(.system(Font.TextStyle.body, design: Font.Design.default))
         }
         
     }

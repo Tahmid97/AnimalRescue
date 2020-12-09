@@ -81,7 +81,7 @@ struct SearchAnimals: View {
                     }
                     
                 }   // End of Form
-                .navigationBarTitle(Text("Search an Animals"), displayMode: .inline)
+                .navigationBarTitle(Text("Search Animals"), displayMode: .inline)
                 .alert(isPresented: $showMissingInputDataAlert, content: { self.missingInputDataAlert })
                 
             }   // End of ZStack

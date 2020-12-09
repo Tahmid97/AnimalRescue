@@ -92,13 +92,6 @@ struct Home: View {
                                 .padding(.bottom, 10)
                         }
                     }
-                    Link(destination: URL(string: "https://dog.ceo/dog-api/")!) {
-                        HStack {
-                            Image(systemName: "gearshape.2")
-                            Text("Dog API")
-                                .padding(.bottom, 10)
-                        }
-                    }
                     Link(destination: URL(string: "https://test1-api.rescuegroups.org/v5/public/docs")!) {
                         HStack {
                             Image(systemName: "gearshape.2")
