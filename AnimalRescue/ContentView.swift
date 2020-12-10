@@ -15,6 +15,18 @@ struct ContentView : View {
     @AppStorage("animal", store: UserDefaults(suiteName: "group.com.TahmidMuttaki.AnimalRescue.AnimalWidget"))
     var widgetData: Data = Data()
     
+    func save(_ animal: [AnimalStruct]) {
+        // Saves the passed animal struct to be passed to widget
+        guard let widgetData = try? JSONEncoder().encode(animal) else { return }
+        self.widgetData = widgetData
+        
+        print("save \(animal)")
+    }
+    
+    func initSave() {
+        save(animalStructList)
+    }
+    
     
     // Subscribe to changes in UserData
     @EnvironmentObject var userData: UserData
@@ -33,18 +45,6 @@ struct ContentView : View {
                 .onAppear(perform: authenticate)
         }
         
-    }
-    
-    func save(_ animal: [AnimalStruct]) {
-        // Saves the passed animal struct to be passed to widget
-        guard let widgetData = try? JSONEncoder().encode(animal) else { return }
-        self.widgetData = widgetData
-        
-        print("save \(animal)")
-    }
-    
-    func initSave() {
-        save(animalStructList)
     }
     
     //this Function implement the face id authentification. change state variable isUnblocked is successfully matched the face
